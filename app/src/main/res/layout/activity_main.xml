@@ -1,20 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <Button
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please set your password"
+        android:id="@+id/textView"
+        android:layout_weight="0.03" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pEditText"
+            android:layout_weight="0.78" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Enter"
+            android:id="@+id/pButton" />
+    </TableRow>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="On"
-        android:id="@+id/onBtn"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your current password is"
+        android:id="@+id/textView3"
+        android:layout_weight="0.03" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OFF"
-        android:id="@+id/offBtn"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pTextView"
+        android:layout_weight="0.03" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.03"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Do you want Lock?"
+            android:id="@+id/textView2"
+            android:layout_weight="0.28" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:id="@+id/onBtn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO"
+            android:id="@+id/offBtn"
+            android:layout_weight="0.28" />
+    </TableRow>
 
 </LinearLayout>
