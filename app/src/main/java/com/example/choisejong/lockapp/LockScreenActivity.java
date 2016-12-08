@@ -78,8 +78,13 @@ public class LockScreenActivity extends Activity {
             String[] rs = new String[mResult.size()];
             mResult.toArray(rs);
 
-            Log.d("SPEECH",""+rs[0]);
             stextView.setText(""+rs[0]);
+
+            if(ConfigActivity.pwd.equals(rs[0])) {
+                Log.d("APPSTATE","ONDESTROY");
+                finish();
+            }
+
         }
 
         @Override
@@ -116,5 +121,9 @@ public class LockScreenActivity extends Activity {
         mRecognizer.startListening(sIntent);
     }
 
+    @Override
+    public void onBackPressed() {
+        //
+    }
 
 }

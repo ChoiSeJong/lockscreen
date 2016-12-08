@@ -21,7 +21,7 @@ public class ConfigActivity extends Activity {
     private EditText pEt;
     private TextView pTv;
 
-    private String pwd = "";
+   static String pwd = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -57,7 +57,6 @@ public class ConfigActivity extends Activity {
 
                 pTv.setText(pEt.getText());
             }});
-
-
     }
+
 }

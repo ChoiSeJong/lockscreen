@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
+import android.util.Log;
 
 /**
  * Created by choi se jong on 2016-12-04.
@@ -47,6 +48,7 @@ public class ScreenService extends Service {
 
     @Override
     public void onDestroy(){
+        mReceiver.reenableKeyguard();
         super.onDestroy();
 
         if(mReceiver != null){
